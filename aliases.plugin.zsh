@@ -1,3 +1,5 @@
+#env
+alias aliases="nvim $ZSH_CUSTOM/plugins/aliases/aliases.plugin.zsh"
 #exa
 alias ls="exa -al --color=always --group-directories-first"
 alias la="exa -a --color=always --group-directories-first"
@@ -48,7 +50,15 @@ case $OSTYPE in
     debian)
       alias upd="pls apt update && pls apt upgrade"
       alias clean="pls apt autoremove"
+      alias pihole-up="up=pihole -up&&sudo sed -ie 's/= 80/= 3996/g' /etc/lighttpd/lighttpd.conf&&sudo /etc/init.d/lighttpd restart"
+      export PATH=~/.local/share/junest/bin:$PATH
+      export PATH="$PATH:~/.junest/usr/bin_wrappers"
+      alias jn="$(command -v junest) --"
+      alias junest="jn fish"
     ;;
   esac
   ;;
 esac
+find.() {
+find . -type f -exec grep -H '$@' {} \;
+}
