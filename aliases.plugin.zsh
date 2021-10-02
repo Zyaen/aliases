@@ -50,7 +50,7 @@ case $OSTYPE in
     debian)
       alias upd="pls apt update && pls apt upgrade"
       alias clean="pls apt autoremove"
-      alias pihole-up="up=pihole -up&&sudo sed -ie 's/= 80/= 3996/g' /etc/lighttpd/lighttpd.conf&&sudo /etc/init.d/lighttpd restart"
+      alias pihole-up="pihole -up&&sudo sed -ie 's/= 80/= 3996/g' /etc/lighttpd/lighttpd.conf&&sudo /etc/init.d/lighttpd restart"
       export PATH=~/.local/share/junest/bin:$PATH
       export PATH="$PATH:~/.junest/usr/bin_wrappers"
       alias jn="$(command -v junest) --"
