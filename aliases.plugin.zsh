@@ -27,8 +27,10 @@ sudo() {
 }
 alias :q="exit"
 #suffix
-alias -s {txt,conf,plist}=nvim
+alias -s {txt,conf,plist,yaml,yml,xml,json,zshrc,bashrc}=nvim
 alias -s md=marktext
+alias -s {avi,flv,mkv,mov,mp4,mpg,ts,wmv}=mpv
+
 case $OSTYPE in
   darwin*)
     alias finder="open -R"
@@ -50,7 +52,7 @@ case $OSTYPE in
     debian)
       alias upd="pls apt update && pls apt upgrade"
       alias clean="pls apt autoremove"
-      alias pihole-up="pihole -up&&sudo sed -ie 's/= 80/= 3996/g' /etc/lighttpd/lighttpd.conf&&sudo /etc/init.d/lighttpd restart"
+      alias pihole-up="pihole -up&&pls sed -ie 's/= 80/= 3996/g' /etc/lighttpd/lighttpd.conf&&pls /etc/init.d/lighttpd restart"
       export PATH=~/.local/share/junest/bin:$PATH
       export PATH="$PATH:~/.junest/usr/bin_wrappers"
       alias jn="$(command -v junest) --"
