@@ -1,5 +1,6 @@
 #env
 alias aliases="nvim $ZSH_CUSTOM/plugins/aliases/aliases.plugin.zsh"
+alias zshrc="nvim $HOME/.zshrc"
 #exa
 alias ls="exa -al --color=always --group-directories-first"
 alias la="exa -a --color=always --group-directories-first"
@@ -12,6 +13,16 @@ alias untar="tar -zxvf"
 #iperf3
 alias iperfc="iperf3 -c"
 alias iperfs="iperf3 -s"
+#ssh
+sshkygn() {
+  ssh-keygen -t ed25519 -C "$(whoami)@$(hostname)"
+}
+sshcpid() {
+  if [ "command -v ssh-copy-id" != "" ]; then ssh-copy-id $@
+  else
+    #wip
+  fi
+}
 #termbin
 alias tb="nc termbin.com 9999"
 #bat
@@ -27,10 +38,9 @@ sudo() {
 }
 alias :q="exit"
 #suffix
-alias -s {txt,conf,plist,yaml,yml,xml,json,zshrc,bashrc}=nvim
+alias -s {txt,conf,plist,yaml,yml,xml,json}=nvim
 alias -s md=marktext
 alias -s {avi,flv,mkv,mov,mp4,mpg,ts,wmv}=mpv
-
 case $OSTYPE in
   darwin*)
     alias finder="open -R"
