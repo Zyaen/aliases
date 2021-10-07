@@ -56,7 +56,7 @@ case $OSTYPE in
       alias fixyay="pls rm /var/lib/pacman/db.lck"
       alias upd="topgrade && pls updatedb"
       alias paru="paru --bottomup"
-      alias clean="pls pacman -Rns (pacman -Qtdq)"
+      alias clean="pls pacman -Rns $(pacman -Qtdq)"
       [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay="paru"
     ;;
     debian)
