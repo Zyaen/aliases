@@ -7,6 +7,7 @@ alias la="exa -a --color=always --group-directories-first"
 alias ll="exa -l --color=always --group-directories-first"
 alias lt="exa -aT --color=always --group-directories-first"
 alias l.="exa -a | egrep '^\.'"
+alias tree="exa --tree"
 #tar
 alias tarnow="tar -acf"
 alias untar="tar -zxvf"
