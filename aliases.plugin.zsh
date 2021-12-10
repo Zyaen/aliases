@@ -38,6 +38,9 @@ sudo() {
   echo -e "\033[0;31mp\033[0;32ml\033[0;34ms\033[0m ask it kindly, instead of giving me orders"
 }
 alias :q="exit"
+ma() {
+figlet $@ | lol
+}
 #suffix
 alias -s {txt,conf,plist,yaml,yml,xml,json}=nvim
 alias -s md=marktext
