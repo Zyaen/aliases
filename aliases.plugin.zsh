@@ -14,6 +14,18 @@ alias untar="tar -zxvf"
 #iperf3
 alias iperfc="iperf3 -c"
 alias iperfs="iperf3 -s"
+#utils
+./() {
+  if [ $# -eq 0 ]
+    then
+      ./$(fzf)
+  else
+    chmod +x "$@"
+    for script in "$@"; do
+      ./"$script"
+    done
+  fi
+}
 #ssh
 sshkygn() {
   ssh-keygen -t ed25519 -C "$(whoami)@$(hostname)"
