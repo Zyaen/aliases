@@ -8,9 +8,6 @@ alias ll="exa -l --color=always --group-directories-first"
 alias lt="exa -aT --color=always --group-directories-first"
 alias l.="exa -a | egrep '^\.'"
 alias tree="exa --tree"
-#tar
-alias tarnow="tar -acf"
-alias untar="tar -zxvf"
 #iperf3
 alias iperfc="iperf3 -c"
 alias iperfs="iperf3 -s"
