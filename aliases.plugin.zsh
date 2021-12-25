@@ -72,7 +72,7 @@ case $OSTYPE in
       alias clean="pls pacman -Rns $(pacman -Qtdq)"
       [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay="paru"
     ;;
-    debian)
+    debian|ubuntu|pop)
       alias upd="pls apt update && pls apt upgrade"
       alias clean="pls apt autoremove"
       alias pihole-up="pihole -up&&pls sed -ie 's/= 80/= 3996/g' /etc/lighttpd/lighttpd.conf&&pls /etc/init.d/lighttpd restart"
