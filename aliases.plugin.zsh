@@ -68,12 +68,11 @@ case $OSTYPE in
     arch|garuda)
       alias fixyay="pls rm /var/lib/pacman/db.lck"
       alias upd="topgrade && pls updatedb"
-      alias paru="paru --bottomup"
       alias clean="pls pacman -Rns $(pacman -Qtdq)"
-      [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay="paru"
+      alias yay="paru --bottomup"
     ;;
     debian|ubuntu|pop)
-      alias upd="pls apt update && pls apt upgrade"
+      alias upd="pls apt update && pls apt upgrade -y"
       alias clean="pls apt autoremove"
       alias pihole-up="pihole -up&&pls sed -ie 's/= 80/= 3996/g' /etc/lighttpd/lighttpd.conf&&pls /etc/init.d/lighttpd restart"
       export PATH=~/.local/share/junest/bin:$PATH
