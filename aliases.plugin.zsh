@@ -65,6 +65,9 @@ case $OSTYPE in
 
   linux-gnu*)
     case $(sed -n 's/^ID=\(.*\)/\1/p' /etc/*release) in
+    alpine|postmarketos)
+      alias upd="pls apk update && pls apk upgrade -a"
+      aliase fixapk="sudo apk fix"
     arch|garuda)
       alias fixyay="pls rm /var/lib/pacman/db.lck"
       alias upd="topgrade && pls updatedb"
