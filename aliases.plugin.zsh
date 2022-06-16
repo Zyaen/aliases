@@ -68,6 +68,7 @@ case $OSTYPE in
     alpine|postmarketos)
       alias upd="pls apk update && pls apk upgrade -a"
       alias fixapk="sudo apk fix"
+    ;;
     arch|garuda)
       alias fixyay="pls rm /var/lib/pacman/db.lck"
       alias upd="topgrade && pls updatedb"
