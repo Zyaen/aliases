@@ -1,4 +1,5 @@
 #env
+alias cdalias="cd $ZSH_CUSTOM/plugins/aliases/"
 alias aliases="nvim $ZSH_CUSTOM/plugins/aliases/aliases.plugin.zsh"
 alias zshrc="nvim $HOME/.zshrc"
 #exa
@@ -63,9 +64,10 @@ case $OSTYPE in
     alias clean="brew cleanup"
     ;;
 
-  linux-gnu*)
+  linux*)
     case $(sed -n 's/^ID=\(.*\)/\1/p' /etc/*release) in
-    alpine|postmarketos)
+    alpine|\"postmarketos\")
+      alias prova="echo prova"
       alias upd="pls apk update && pls apk upgrade -a"
       alias fixapk="sudo apk fix"
     ;;
