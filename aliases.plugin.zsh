@@ -24,6 +24,9 @@ alias iperfs="iperf3 -s"
     done
   fi
 }
+yt2mp3() {
+	yt-dlp -f "bestaudio/best" -ciw -o "%(title)s.%(ext)s" -v -x --audio-quality 0 --audio-format mp3 "$@" &> /dev/null &
+}
 #ssh
 sshkygn() {
   ssh-keygen -t ed25519 -C "$(whoami)@$(hostname)"
