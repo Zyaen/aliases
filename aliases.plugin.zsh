@@ -40,7 +40,7 @@ sshcpid() {
 #termbin
 alias tb="nc termbin.com 9999"
 #bat
-alias cat="bat --style header --style rules --style snip --style changes --style header"
+alias cat="bat --style header --style snip --style changes --style header"
 #lolcat
 alias lol="lolcat -as 90 -F 0.7"
 #figlet
