@@ -27,6 +27,15 @@ alias iperfs="iperf3 -s"
 yt2mp3() {
 	yt-dlp -f "bestaudio/best" -ciw -o "%(title)s.%(ext)s" -v -x --audio-quality 0 --audio-format mp3 "$@" &> /dev/null &
 }
+pathappend() {
+	echo "export PATH=\$PATH:$@" >> ~/.zshrc
+}
+pathprepend() {
+	echo "export PATH=$@:\$PATH" >> ~/.zshrc
+}
+setenv() {
+  echo "export $@" >> ~/.zshrc
+}
 #ssh
 sshkygn() {
   ssh-keygen -t ed25519 -C "$(whoami)@$(hostname)"
