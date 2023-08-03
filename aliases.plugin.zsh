@@ -12,6 +12,8 @@ alias tree="exa --tree"
 #iperf3
 alias iperfc="iperf3 -c"
 alias iperfs="iperf3 -s"
+#adb
+alias szk="adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh"
 #utils
 ./() {
   if [ $# -eq 0 ]
